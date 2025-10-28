@@ -24,15 +24,17 @@ export interface ShippingAddress {
 }
 
 export interface Order {
-  id: string;
+  _id?: string; // MongoDB ID
+  id?: string; // Alternative ID field
   userId: string;
   items: CartItem[];
-  subtotal: number;
-  tax: number;
-  shipping: number;
-  total: number;
+  subtotal?: number;
+  tax?: number;
+  shipping?: number;
+  total?: number;
+  totalAmount: number; // Total amount from API
   shippingAddress: ShippingAddress;
   status: "pending" | "processing" | "shipped" | "delivered" | "cancelled";
-  createdAt: string;
-  paymentMethod: "credit_card" | "debit_card";
+  createdAt: string | Date;
+  paymentMethod?: "credit_card" | "debit_card";
 }
