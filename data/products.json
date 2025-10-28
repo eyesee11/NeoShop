@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "name": "Wireless Bluetooth Headphones",
+    "slug": "wireless-bluetooth-headphones",
+    "description": "Premium noise-cancelling wireless headphones with 30-hour battery life and crystal-clear audio quality.",
+    "price": 149.99,
+    "category": "Electronics",
+    "inventory": 25,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+  },
+  {
+    "id": "2",
+    "name": "Smart Fitness Watch",
+    "slug": "smart-fitness-watch",
+    "description": "Track your workouts, heart rate, and sleep patterns with this advanced fitness smartwatch.",
+    "price": 199.99,
+    "category": "Wearables",
+    "inventory": 15,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+  },
+  {
+    "id": "3",
+    "name": "Mechanical Gaming Keyboard",
+    "slug": "mechanical-gaming-keyboard",
+    "description": "RGB backlit mechanical keyboard with customizable keys and ultra-responsive switches.",
+    "price": 89.99,
+    "category": "Gaming",
+    "inventory": 40,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400"
+  },
+  {
+    "id": "4",
+    "name": "4K Webcam Pro",
+    "slug": "4k-webcam-pro",
+    "description": "Professional 4K webcam with auto-focus and built-in microphone for streaming and video calls.",
+    "price": 129.99,
+    "category": "Electronics",
+    "inventory": 8,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400"
+  },
+  {
+    "id": "5",
+    "name": "Ergonomic Office Chair",
+    "slug": "ergonomic-office-chair",
+    "description": "Premium ergonomic office chair with lumbar support and adjustable armrests.",
+    "price": 299.99,
+    "category": "Furniture",
+    "inventory": 12,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=400"
+  },
+  {
+    "id": "6",
+    "name": "Portable SSD 1TB",
+    "slug": "portable-ssd-1tb",
+    "description": "Ultra-fast portable SSD with 1TB storage capacity and USB-C connectivity.",
+    "price": 119.99,
+    "category": "Storage",
+    "inventory": 30,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400"
+  },
+  {
+    "id": "7",
+    "name": "Wireless Mouse",
+    "slug": "wireless-mouse",
+    "description": "Ergonomic wireless mouse with precision tracking and rechargeable battery.",
+    "price": 39.99,
+    "category": "Accessories",
+    "inventory": 50,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400"
+  },
+  {
+    "id": "8",
+    "name": "USB-C Hub",
+    "slug": "usb-c-hub",
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery.",
+    "price": 49.99,
+    "category": "Accessories",
+    "inventory": 5,
+    "lastUpdated": "2025-10-29T00:00:00.000Z",
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400"
+  }
+]
