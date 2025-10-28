@@ -6,8 +6,7 @@
 import { describe, it, expect } from "vitest";
 
 describe("POST /api/revalidate", () => {
-  const validSecret =
-    "x9k3m7n2p5q8r1t4v6w0y3z5a8c2e4g7i9k1m3n6p8q0r2t5v7w9x2y4z6";
+  const validSecret = process.env.REVALIDATION_SECRET || "";
 
   it("should validate revalidation secret", () => {
     const secret = validSecret;
@@ -94,8 +93,7 @@ describe("Revalidation Logic", () => {
 });
 
 describe("Error Handling", () => {
-  const validSecret =
-    "x9k3m7n2p5q8r1t4v6w0y3z5a8c2e4g7i9k1m3n6p8q0r2t5v7w9x2y4z6";
+  const validSecret = process.env.REVALIDATION_SECRET || "";
 
   it("should return error for invalid secret", () => {
     const secret = "invalid";

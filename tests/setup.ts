@@ -9,10 +9,8 @@
 // mock setup, and test utilities
 
 export const TEST_CONFIG = {
-  ADMIN_API_KEY:
-    "de06deb2c5f2e50c426382571fb3071b38416cea68e75dd9948b9db16706f856",
-  REVALIDATION_SECRET:
-    "x9k3m7n2p5q8r1t4v6w0y3z5a8c2e4g7i9k1m3n6p8q0r2t5v7w9x2y4z6",
+  ADMIN_API_KEY: process.env.ADMIN_API_KEY || "",
+  REVALIDATION_SECRET: process.env.REVALIDATION_SECRET || "",
   API_BASE_URL: "http://localhost:3000/api",
 };
 

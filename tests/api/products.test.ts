@@ -104,8 +104,7 @@ describe("GET /api/products/[slug]", () => {
 });
 
 describe("POST /api/products", () => {
-  const validApiKey =
-    "de06deb2c5f2e50c426382571fb3071b38416cea68e75dd9948b9db16706f856";
+  const validApiKey = process.env.ADMIN_API_KEY || "";
 
   it("should create a new product with valid data", () => {
     const newProduct = {

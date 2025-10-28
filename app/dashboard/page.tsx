@@ -25,10 +25,20 @@ export default function DashboardPage() {
   const fetchInventoryData = async () => {
     try {
       setLoading(true);
+
+      // Get API key from sessionStorage or prompt (should use proper auth in production)
+      let apiKey = sessionStorage.getItem("adminApiKey");
+      if (!apiKey) {
+        apiKey = prompt("Enter Admin API Key:");
+        if (!apiKey) {
+          throw new Error("API key is required");
+        }
+        sessionStorage.setItem("adminApiKey", apiKey);
+      }
+
       const response = await fetch("/api/inventory", {
         headers: {
-          "x-api-key":
-            "de06deb2c5f2e50c426382571fb3071b38416cea68e75dd9948b9db16706f856",
+          "x-api-key": apiKey,
         },
         cache: "no-store",
       });

@@ -49,13 +49,20 @@ export default function AdminPage() {
 
   const handleAddProduct = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Get API key from user prompt (should be stored securely in production)
+    const apiKey = prompt("Enter Admin API Key:");
+    if (!apiKey) {
+      error("API key is required");
+      return;
+    }
+
     try {
       const response = await fetch("/api/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key":
-            "de06deb2c5f2e50c426382571fb3071b38416cea68e75dd9948b9db16706f856",
+          "x-api-key": apiKey,
         },
         body: JSON.stringify(formData),
       });
@@ -84,6 +91,13 @@ export default function AdminPage() {
     e.preventDefault();
     if (!editingProduct) return;
 
+    // Get API key from user prompt (should be stored securely in production)
+    const apiKey = prompt("Enter Admin API Key:");
+    if (!apiKey) {
+      error("API key is required");
+      return;
+    }
+
     try {
       const response = await fetch(
         `/api/products/update/${editingProduct.id}`,
@@ -91,8 +105,7 @@ export default function AdminPage() {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
-            "x-api-key":
-              "de06deb2c5f2e50c426382571fb3071b38416cea68e75dd9948b9db16706f856",
+            "x-api-key": apiKey,
           },
           body: JSON.stringify(formData),
         }
