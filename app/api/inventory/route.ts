@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
       lowStockProducts,
       timestamp: new Date().toISOString(),
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch inventory data" },
       { status: 500 }

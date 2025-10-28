@@ -38,6 +38,7 @@ async function seedDatabase() {
     }
 
     // Insert products
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result = await collection.insertMany(productsData as any[]);
 
     console.log(`✅ Successfully seeded ${result.insertedCount} products!`);

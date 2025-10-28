@@ -20,7 +20,7 @@ export async function PUT(
     }
 
     const body = await request.json();
-    const updates: any = {};
+    const updates: Record<string, string | number> = {};
 
     if (body.name !== undefined) updates.name = body.name;
     if (body.description !== undefined) updates.description = body.description;

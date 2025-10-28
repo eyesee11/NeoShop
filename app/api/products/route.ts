@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const products = await readProducts();
     return NextResponse.json(products);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch products" },
       { status: 500 }

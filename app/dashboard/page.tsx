@@ -14,7 +14,7 @@ interface InventoryStats {
 }
 
 export default function DashboardPage() {
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   const [stats, setStats] = useState<InventoryStats | null>(null);
   const [lowStockProducts, setLowStockProducts] = useState<Product[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
@@ -69,6 +69,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     fetchInventoryData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {

@@ -14,7 +14,10 @@ export async function readProducts(): Promise<Product[]> {
     // Convert MongoDB _id to string id if needed
     return products.map((p) => ({
       ...p,
-      id: p.id || (p as any)._id?.toString(),
+      id:
+        p.id ||
+        (p as unknown as { _id?: { toString(): string } })._id?.toString() ||
+        "",
     }));
   } catch (error) {
     console.error("Error reading products:", error);
@@ -35,7 +38,12 @@ export async function getProductBySlug(
 
     return {
       ...product,
-      id: product.id || (product as any)._id?.toString(),
+      id:
+        product.id ||
+        (
+          product as unknown as { _id?: { toString(): string } }
+        )._id?.toString() ||
+        "",
     };
   } catch (error) {
     console.error("Error getting product by slug:", error);
@@ -54,7 +62,12 @@ export async function getProductById(id: string): Promise<Product | undefined> {
 
     return {
       ...product,
-      id: product.id || (product as any)._id?.toString(),
+      id:
+        product.id ||
+        (
+          product as unknown as { _id?: { toString(): string } }
+        )._id?.toString() ||
+        "",
     };
   } catch (error) {
     console.error("Error getting product by id:", error);
@@ -65,6 +78,7 @@ export async function getProductById(id: string): Promise<Product | undefined> {
 export async function addProduct(product: Product): Promise<Product> {
   try {
     const db = await getDatabase();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await db.collection<Product>(COLLECTION_NAME).insertOne(product as any);
     return product;
   } catch (error) {
@@ -96,7 +110,12 @@ export async function updateProduct(
 
     return {
       ...result,
-      id: result.id || (result as any)._id?.toString(),
+      id:
+        result.id ||
+        (
+          result as unknown as { _id?: { toString(): string } }
+        )._id?.toString() ||
+        "",
     };
   } catch (error) {
     console.error("Error updating product:", error);
@@ -116,7 +135,10 @@ export async function getLowStockProducts(
 
     return products.map((p) => ({
       ...p,
-      id: p.id || (p as any)._id?.toString(),
+      id:
+        p.id ||
+        (p as unknown as { _id?: { toString(): string } })._id?.toString() ||
+        "",
     }));
   } catch (error) {
     console.error("Error getting low stock products:", error);

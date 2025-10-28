@@ -56,12 +56,14 @@ export async function POST(request: NextRequest) {
       tax: orderData.tax,
       shipping: orderData.shipping,
       total: orderData.total,
+      totalAmount: orderData.total, // Same as total for consistency
       shippingAddress: orderData.shippingAddress,
       status: "pending",
       createdAt: new Date().toISOString(),
       paymentMethod: orderData.paymentMethod || "credit_card",
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await ordersCollection.insertOne(order as any);
 
     return NextResponse.json(

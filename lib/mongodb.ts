@@ -11,7 +11,7 @@ let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
 declare global {
-  // eslint-disable-next-line no-var
+  // eslint-disable-next-line no-var -- Global variable needed for HMR in development
   var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
