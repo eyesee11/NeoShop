@@ -385,7 +385,7 @@ Environment variables needed in Vercel:
 
 ## 📸 Screenshots
 
-_Screenshots should be added here after deployment_
+![alt text](<Screenshot (112).png>) ![alt text](<Screenshot (113).png>) ![alt text](<Screenshot (114).png>) ![alt text](<Screenshot (115).png>) ![alt text](<Screenshot (116).png>) ![alt text](<Screenshot (117).png>)
 
 ## 🚀 Future Enhancements
 
